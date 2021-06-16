@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Rubik', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background-color: #F2F6FE;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav{
+    background-color: #2E53DA;
+    margin: 10px;
+    border-radius: 12px;
+    padding:20px 28px;
+    color:#FFFFFF;
+    font-weight: 500;
+    font-size: 1.5em;
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav::before{
+    content:"";
+    display: block;
+    width:5px;
+    height: 60%;
+    background-color: #1CCEF4;
+    position: absolute;
+    left:0;
+    top:50%;
+    transform: translate(0,-50%);
 }
 
-.App-link {
-  color: #61dafb;
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content > h2{
+    color:#3C3D55;
+    font-weight: 500;
+    margin:100px 0;
+    font-size: 2.5em;
+    position: relative;
+}
+
+.content > h2::after{
+    content:"";
+    display: block;
+    width:80px;
+    height: 4px;
+    background-color: #1CCEF4   ;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%,10px);
+}
+
+.review-box{
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding:50px 10px;
+    border-radius: 12px;
+    margin:0 0 50px 0;
+}
+
+.review-box img{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-box > h3{
+    color:#2E53DA;
+    font-size: 2em;
+    font-weight: 500;
+    margin-top:30px;
+}
+
+.review-box > p{
+    font-size: 1.2em;
+    color:#000000cc;
+}
+
+.review-box > article{
+    max-width: 70%;
+    text-align: center;
+    margin:50px 0 0 0;
+    color:#606060;
+    font-weight: 300;
+}
+
+.navigate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:100px 0 0 0;
+}
+
+.navigate div{
+    display: flex;
+    font-size: 3em;
+    cursor: pointer;
+    color:#2E53DA;
+}
+
+.navigate button{
+    padding:0px 40px;
+    height: 40px;
+    background: rgb(46,83,218);
+    background: linear-gradient(180deg, rgba(46,83,218,1) 89%, rgba(20,42,125,1) 89%);
+    border:none;
+    border-radius: 5px;
+    color:#FFFFFF;
+    cursor: pointer;
+}
+
+.navigate button:active{
+    background: rgb(32, 51, 122);
 }
