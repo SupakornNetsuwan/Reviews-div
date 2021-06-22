@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppOne from './AppOne';
+import Menu from './Menu';
 
-ReactDOM.render(<AppOne/>,document.getElementById('root'));
+ReactDOM.render(<Menu/>,document.getElementById('root'));
